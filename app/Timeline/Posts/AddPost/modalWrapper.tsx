@@ -55,8 +55,9 @@ const ModalWrapper: React.FC<ModalWrapperProps> = ({ showModal, handleCloseModal
       formDataToSend.append('postLikes', formData.postLikes.toString());
       formDataToSend.append('timestamp', formData.timestamp);
 
-      const response = await axios.post("/api/addPost", formDataToSend);
+      const response = await axios.post('/api/addPost', formDataToSend);
       console.log("Post created successfully!", response.data);
+      router.push('/postModal');
 
     } catch (error: any) {
       console.error('Failed to send post:', error.message);

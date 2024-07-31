@@ -2,7 +2,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./Post.css";
+import "./post.css";
 import Avatar from "@mui/material/Avatar";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -12,8 +12,8 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { Tooltip } from "@mui/material";
 import { useSelector } from "react-redux";
 import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
-import CommentForm from "../../components/CommentForm";
-import CommentList from "../../components/CommentList";
+import CommentForm from "@/app/Components/CommentForm";
+import CommentList from "../../Components/CommentList";
 
 const Post = () => {
   const posts = useSelector((state) => state.posts);

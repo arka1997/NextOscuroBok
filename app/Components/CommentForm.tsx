@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import "./CommentForm.css";
+import "./commentForm.css";
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 
@@ -10,7 +10,7 @@ const CommentForm = ({
     autoFocus = false,
     initialValue = "",
   }) => {
-    const posts = useSelector(state => state.posts);
+    const posts = useSelector((state) => state.posts);
     const [message, setMessage] = useState(initialValue);
     const [togglePostButton, setTogglePostButton] = useState(false);
 
