@@ -1,0 +1,44 @@
+.sidenav{
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    font-family: "Instagram", sans-serif;
+}
+  
+.sidenav__logo{
+    background-color: brown;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10%;
+    width: 100%;
+    margin: 15%;
+    padding: 15%;
+    border-radius: 5px;
+    background-image: url('/src/img/Logo.png');
+}
+.sidenav__buttons{
+    display: flex;
+    flex-direction: column;
+}
+.sidenav__button{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  background: 0;
+  border:0;
+  margin: 5px 10px 5px 10px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 25px;
+  width: 100%;
+}
+.sidenav__button:hover{
+  cursor:pointer;
+  background-color: rgba(255, 255, 255, 0.128);
+}
+.sidenav__button > span {
+  font-size: 25px;
+  margin-left: 10px;
+}

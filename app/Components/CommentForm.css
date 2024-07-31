@@ -1,0 +1,45 @@
+.comment-form-row {
+  display: flex;
+  gap: .5rem;
+  
+    padding: 5px 10px;
+}
+.message-input {
+  flex-grow: 1;
+  resize: none;
+  height: 70px;
+  border-radius: .5em;
+  padding: .5em;
+  font-size: inherit;
+  font-family: inherit;
+  border: 2px solid hsl(235, 50%, 74%);
+  line-height: 1.4;
+}
+
+.message-input:focus {
+  border-color: hsl(235, 100%, 67%);
+  outline: none;
+}
+
+  .btn2 {
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
+    height: 70px; /* Explicitly set the height to match the textarea */
+  }
+  
+  /* Active state (enabled) */
+  .btn2:enabled {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  /* Inactive state (disabled) */
+  .btn2:disabled {
+    background-color: #d3d3d3; /* Light gray background */
+    color: #808080; /* Gray text */
+    cursor: not-allowed; /* Not-allowed cursor */
+  }

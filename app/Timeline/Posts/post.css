@@ -1,0 +1,123 @@
+.post {
+  width: 80%;
+  margin: 30px 40px 50px 10%;/* can be modified for changing the position of Timeline posts */
+  align-items: center;
+  justify-content: center;
+}
+
+.post__header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post__headerAuthor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.post__headerAuthor > span {
+  color: grey;
+  font-size: 15px;
+}
+
+.post__image > img {
+  width: 100%;
+  border-radius: 6px;
+  border: 0.6px solid rgba(128, 128, 128, 0.516);
+}
+
+.post__footer {
+  margin-top: 0.6cap;
+  font-size: smaller;
+  border-bottom: 0.1px solid #040404; /* Add this line */
+  padding-bottom: 1cap;
+  margin-bottom: 3cap;
+}
+
+.post__footerIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size:150%;
+  margin-bottom: 0.5cap;
+}
+
+/* Update vanishing cards */
+.response-card {
+  position: fixed;
+  top: 20px; /* Adjust the distance from the top as needed */
+  right: 20px; /* Adjust the distance from the right as needed */
+  background-color: rgba(76, 175, 80, 0.8); /* Transparent green background */
+  color: white;
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: appearAndVanish 3s ease forwards; /* Animation duration 3s */
+  opacity: 0; /* Initially hidden */
+}
+
+@keyframes appearAndVanish {
+  0% { 
+    opacity: 0; /* Start invisible */
+    transform: translateY(-20px); /* Move up from top */
+  }
+  10% {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Stop at the top */
+  }
+  90% {
+    opacity: 1; /* Stay visible for most of the animation duration */
+  }
+  100% { 
+    opacity: 0; /* End invisible */
+    transform: translateY(-20px); /* Move up again */
+  }
+}
+
+
+
+/* Love Like button css */
+.postIcon {
+  color: #8d8a8a; /* Set initial color */
+  transition: color 0.4s; /* Add transition effect for color change */
+  margin-right: 10px;
+  /* font-size: 400px; */
+}
+
+.postIcon:hover {
+  color: red; /* Change color on hover */
+}
+
+
+.fas{
+  color: #f50057;
+  transition: .4s;
+}
+
+
+.fas:hover {
+  transform: scale(1.2); /* Enlarge the icon on hover */
+  transition: transform 0.2s ease; /* Add a smooth transition */
+}
+
+.fas.active {
+  animation: pulse 0.5s ease; /* Apply the pulse animation when active */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
