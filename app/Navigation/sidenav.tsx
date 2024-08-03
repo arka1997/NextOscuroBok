@@ -1,6 +1,6 @@
 'use client'
 import React, {useState} from 'react';
-import "./Sidenav.css";
+import "./sidenav.css";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import ExploreIcon from "@mui/icons-material/Explore";

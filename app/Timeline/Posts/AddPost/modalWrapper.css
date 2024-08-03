@@ -1,11 +1,123 @@
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    z-index: 999; /* Ensure the overlay appears above other content */
-    backdrop-filter: blur(5px); /* Apply a blur effect to the background */
-  }
-  
+/* Custom styles for the modal backdrop */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+}
+
+/* Custom styles for the modal content */
+.modal-content {
+  border-radius: 0.5rem; /* Optional: Add some border-radius to the modal */
+}
+
+/* Styles for the form within the modal */
+.form-wrapper {
+  max-width: 24rem; /* Max width of 24rem for the form */
+  margin: 0 auto; /* Center the form */
+  padding: 1.5rem; /* Padding of 1.5rem */
+  background-color: #fff; /* White background */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 0.5rem 1rem rgba(62, 61, 61, 0.1); /* Subtle shadow */
+}
+/* Styles for the modal */
+.modal-heading{
+  font-size: 1.45rem; /* Font size of 1.25rem */
+  font-weight: 600; /* Bold font weight */
+  color: #06aff7;
+}
+
+/* Styles for the heading */
+.form-heading {
+  font-size: 0.9rem; /* Font size of 1.25rem */
+  font-weight: 600; /* Bold font weight */
+  color: #0f1010;
+}
+
+/* Styles for the input fields and textareas */
+.input-field,
+.textarea-field,
+form input[type="text"] {
+  width: 100%; /* Full width */
+  padding: 1rem; /* Padding of 1rem */
+  border: 1px solid #e5e7eb; /* Border color */
+  border-radius: 0.5rem; /* Rounded corners */
+  resize: none; /* Disable resizing */
+  height: 5rem;
+  background-color: rgba(144, 211, 249, 0.5);
+  margin-bottom: 1rem;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  outline: none; /* Remove default outline on focus */
+  border-color: #3b82f6; /* Border color on focus */
+}
+
+.input-field {
+  height: 2.5rem; /* Set height for input fields */
+}
+
+.textarea-field {
+  height: 5rem; /* Set height for textarea fields */
+}
+
+/* Styles for the file input container */
+.file-input-container {
+  width: 100%; /* Full width */
+  height: 10rem; /* Height of 10rem */
+  background-color: #f3f4f6; /* Background color */
+  border-radius: 0.5rem; /* Rounded corners */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative; /* Relative positioning */
+  margin-bottom: 1rem; /* Margin at the bottom */
+  overflow: hidden; /* Ensure the image does not overflow */
+}
+
+/* Styles for the image preview */
+.image-preview {
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  max-height: 100%; /* Ensure the image does not exceed the container height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+/* Styles for the file input */
+.file-input {
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Top position */
+  left: 0; /* Left position */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  opacity: 0; /* Fully transparent */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Styles for the button */
+.submit-button {
+  background-color: #3b82f6; /* Blue background color */
+  color: #fff; /* White text color */
+  padding: 0.5rem 1rem; /* Padding of 0.5rem top/bottom and 1rem left/right */
+  border-radius: 0.5rem; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Transition effect for background color */
+}
+
+/* Hover and focus styles for the button */
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #2563eb; /* Darker blue background color on hover/focus */
+  outline: none; /* Remove default outline on focus */
+}
+
+/* Styles for the empty image placeholder */
+.image-placeholder {
+  background-color: #f3f4f6; /* Light gray background color */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: #9ca3af; /* Gray text color */
+  font-size: 0.75rem; /* Font size of 0.75rem */
+  height: 10rem; /* Height of 10rem */
+  width: 100%; /* Full width */
+  border-radius: 0.5rem; /* Rounded corners */
+}
