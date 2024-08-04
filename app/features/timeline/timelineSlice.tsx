@@ -1,36 +1,51 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit"
+import { createSlice, PayloadAction, nanoid } from "@reduxjs/toolkit";
 
-const initialState = {
+// Updated interfaces to match component types
+interface PostType {
+    _id: string;
+    postImage: string;
+    postText: string;
+    userName: string;
+    postLikes: number;
+    timestamp: string;
+}
+
+interface CommentType {
+    _id: string;
+    postId: string;
+    rootMessage: string;
+    userName: string;
+    rootCommentLikes: number;
+    timestamp: string;
+}
+
+interface TimelineState {
+    posts: PostType[];
+    comments: CommentType[];
+}
+
+const initialState: TimelineState = {
     posts: [],
     comments: []
 };
 
 export const timelineSlice = createSlice({
-    name: 'posts',
+    name: 'timeline',
     initialState,
     reducers: {
-        timelinePosts: (state, action) => {
-            const posts = {
-                    id: nanoid(),
-                    text: action.payload,
-                }
-                state.posts.push(posts)  // Set the posts directly
+        timelinePosts: (state, action: PayloadAction<PostType>) => {
+            state.posts.push(action.payload);
         },
-        addComment: (state, action) => {
-            
-            const { postId, comment} = action.payload;
-            const comments = {
-                postId: postId,
-                text: comment,
-            };
-            state.comments.push(comments);
+        addComment: (state, action: PayloadAction<{ postId: string; comment: CommentType }>) => {
+            const { postId, comment } = action.payload;
+            state.comments.push(comment);
         },
-        deleteComment: (state, action) => {
-            state.comments = state.comments.filter(comment => comment.id !== action.payload);
+        deleteComment: (state, action: PayloadAction<string>) => {
+            state.comments = state.comments.filter(comment => comment._id !== action.payload);
         }
     }
 });
-//Here the timeSlice has multiple actions like timelinePosts,..,etc. And we are destructuring that and storing them in a variable
-export const {timelinePosts, addComment, deleteComment } = timelineSlice.actions
 
-export default timelineSlice.reducer
+export const { timelinePosts, addComment, deleteComment } = timelineSlice.actions;
+
+export default timelineSlice.reducer;

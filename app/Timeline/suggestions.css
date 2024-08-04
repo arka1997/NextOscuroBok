@@ -1,49 +1,61 @@
 .suggestions {
-  /* position:fixed; */
-    margin-top: 30px;
-    margin-right: 20px;
-  }
-  
-  .suggestions__title {
-    color: grey;
-    font-weight: bold;
-  }
-  
-  .username__left {
-    display: inline-flex;
-  }
-  
-  .username__info {
-    display: flex;
-    flex-direction: column;
-    margin-left: 7px;
-  }
-  
-  .relation {
-    color: grey;
-    font-size: 12px;
-  }
-  
-  .suggestions__username {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  
-  .follow__button {
-    color: #0095f6;
-    font-weight: bold;
-    background: 0;
-    border: 0;
-    margin-right: 5px;
-  }
-  
-  .follow__button:hover {
-    color: white;
-    cursor: pointer;
-  }
-  
-  .username {
-    font-weight: 600;
-    font-size: 14px;
-  }
+  margin-top: 30px;
+  margin-right: 20px;
+  padding: 10px; /* Added padding to give some spacing inside the container */
+  border: 1px solid #f7e3e3; /* Optional: Add a border for better visibility */
+  border-radius: 8px; /* Optional: Rounded corners */
+  background-color: #fff; /* Optional: Background color for better contrast */
+}
+
+.suggestions__title {
+  color: grey;
+  font-weight: bold;
+  font-size: 16px; /* Increased font size for better readability */
+  margin-bottom: 10px; /* Added margin to separate title from content */
+}
+
+.username__left {
+  display: flex; /* Changed to flex for proper alignment */
+  align-items: center; /* Vertically center-align items */
+}
+
+.username__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7px;
+}
+
+.relation {
+  color: grey;
+  font-size: 12px;
+}
+
+.suggestions__username {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center-align items */
+  margin-top: 15px;
+  padding: 10px; /* Added padding for better spacing */
+  border-bottom: 1px solid #f8dcdc; /* Optional: Add a bottom border to separate each suggestion */
+}
+
+.follow__button {
+  color: #0095f6;
+  font-weight: bold;
+  background: none; /* Use 'none' instead of '0' for better readability */
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px; /* Added padding for better button size */
+}
+
+.follow__button:hover {
+  color: white;
+  background-color: #0095f6; /* Added background color on hover */
+  border-radius: 4px; /* Optional: Rounded corners on hover */
+}
+
+.username {
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(114, 212, 227);
+}

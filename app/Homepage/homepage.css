@@ -1,13 +1,28 @@
-.homepage{
+.homepage {
     display: flex;
     flex-direction: row;
-}
-.homepage__navWraper{
-    /* Its 20%, that is needed by nav Bar */
-    flex: 0.3;
-    background-color: rgb(0, 0, 0);
-}
-.homepage__timeline{
-    flex:0.7;
-    background-color: rgb(0, 0, 0);
-}
+    height: 100vh; /* Ensure it takes up the full viewport height */
+    background-color: #1c34e9; /* Background color for the entire page */
+  }
+  
+  .homepage__navWraper {
+    flex: 0.3; /* 30% width for the navigation sidebar */
+    background-color: #fddede; /* Same background color as the sidenav for consistency */
+    height: 100vh; /* Ensure it spans the full height */
+    overflow: auto; /* Allow scrolling if content overflows */
+  }
+  
+  .homepage__timeline {
+    flex: 0.7; /* 70% width for the timeline content */
+    background-color: #f5e0e0; /* Same background color as the sidenav for consistency */
+    height: 100vh; /* Ensure it spans the full height */
+    overflow: auto; /* Allow scrolling if content overflows */
+    padding: 20px; /* Optional: Add padding to the timeline content */
+  }
+  
+  /* Additional optional styling for the Homepage component */
+  .homepage__navWraper,
+  .homepage__timeline {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  

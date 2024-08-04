@@ -1,6 +1,6 @@
 import { Avatar } from "@mui/material";
 import React from "react";
-import "./Suggestions.css";
+import "./suggestions.css";
 
 function Suggestions() {
   return (
@@ -10,11 +10,11 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              <Avatar>R</Avatar>
+              <Avatar>A</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
+              <span className="username">gaurang_</span>
+              <span className="relation">New to OscuroBok</span>
             </div>
           </div>
           <button className="follow__button">Follow</button>
@@ -23,11 +23,11 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              <Avatar>R</Avatar>
+              <Avatar>G</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
+              <span className="username">anki_</span>
+              <span className="relation">New to OscuroBok</span>
             </div>
           </div>
           <button className="follow__button">Follow</button>
@@ -36,11 +36,11 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              <Avatar>R</Avatar>
+              <Avatar>A</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
+              <span className="username">abhi</span>
+              <span className="relation">New to OscuroBok</span>
             </div>
           </div>
           <button className="follow__button">Follow</button>
@@ -49,11 +49,11 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              <Avatar>R</Avatar>
+              <Avatar>S</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
+              <span className="username">ayan</span>
+              <span className="relation">New to OscuroBok</span>
             </div>
           </div>
           <button className="follow__button">Follow</button>

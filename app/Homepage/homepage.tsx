@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import "./Homepage.css";
 import Sidenav from '../Navigation/sidenav';
-// import Timeline from "../timeline/Timeline"
+import Timeline from '../Timeline/timeline';
 // import Comments from '../components/Comments';
 const Homepage = () => {
 
@@ -12,7 +12,7 @@ const Homepage = () => {
                 <Sidenav />
             </div>
             <div className="homepage__timeline">
-                {/* <Timeline /> */}
+                <Timeline />
             </div>
                 {/* <Comments /> */}
         </div>
